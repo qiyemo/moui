@@ -7,12 +7,8 @@
  */
 
 import type {UserConfig} from 'vitepress'
-// import {head} from './config/head'
 import {sidebar} from './config/sidebars'
 import {nav} from './config/nav'
-import { mdPlugin } from './config/plugins'
-// import {mdPlugin} from './config/plugins'
-// import {features} from './config/features'
 
 const buildTransformers = () => {
   const transformer = () => {
@@ -49,9 +45,13 @@ module.exports = {
     nav,
     sidebar
   },
-  // markdown: {
-  //   config: (md) => mdPlugin(md)
-  // },
+  markdown: {
+    config: (md) => {
+      // 这里可以使用 markdown-it 插件，vitepress-theme-demoblock就是基于此开发的
+      const {demoBlockPlugin } = require('vitepress-theme-demoblock');
+      md.use(demoBlockPlugin);
+    }
+  },
 
   vue: {
     template: {
