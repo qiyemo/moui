@@ -5,21 +5,21 @@
  * @LastEditTime: 2021-10-19 17:20:59
  * @Description: file content
  */
-class ElementPlusError extends Error {
+class MouiError extends Error {
   constructor(m: string) {
     super(m)
-    this.name = 'ElementPlusError'
+    this.name = 'MouiError'
   }
 }
 
 export function throwError(scope: string, m: string): never {
-  throw new ElementPlusError(`[${scope}] ${m}`)
+  throw new MouiError(`[${scope}] ${m}`)
 }
 
 export function debugWarn(scope: string, message: string): void {
   if (process.env.NODE_ENV !== 'production') {
     // eslint-disable-next-line no-console
-    console.warn(new ElementPlusError(`[${scope}] ${message}`))
+    console.warn(new MouiError(`[${scope}] ${message}`))
   }
 }
 

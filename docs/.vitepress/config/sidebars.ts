@@ -31,10 +31,5 @@ export const sidebar = {
       text: '按钮',
       link: '/components/button'
     },
-    {
-      text: '树',
-      link: '/components/tree'
-    },
-
   ]
 }

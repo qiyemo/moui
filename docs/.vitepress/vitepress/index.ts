@@ -1,2 +1,1 @@
-import '../../../packages/theme-chalk/src/index.scss';
-
+import '../../../packages/theme-chalk/src/index.css';

@@ -10,33 +10,6 @@ import type {UserConfig} from 'vitepress'
 import {sidebar} from './config/sidebars'
 import {nav} from './config/nav'
 
-const buildTransformers = () => {
-  const transformer = () => {
-    return {
-      props: [],
-      needRuntime: true,
-    }
-  }
-
-  const transformers = {}
-  const directives = [
-    'infinite-scroll',
-    'loading',
-    'popover',
-    'click-outside',
-    'repeat-click',
-    'trap-focus',
-    'mousewheel',
-    'resize',
-  ]
-  directives.forEach((k) => {
-    transformers[k] = transformer
-  })
-
-  return transformers
-}
-
-
 module.exports = {
   title: 'Hellow World',
   description: 'Hellow World',
@@ -50,15 +23,6 @@ module.exports = {
       // 这里可以使用 markdown-it 插件，vitepress-theme-demoblock就是基于此开发的
       const {demoBlockPlugin } = require('vitepress-theme-demoblock');
       md.use(demoBlockPlugin);
-    }
-  },
-
-  vue: {
-    template: {
-      ssr: true,
-      compilerOptions: {
-        directiveTransforms: buildTransformers(),
-      }
     }
   }
 } as UserConfig

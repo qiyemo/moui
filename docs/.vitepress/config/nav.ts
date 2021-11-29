@@ -5,12 +5,6 @@
  * @LastEditTime: 2021-10-19 19:44:24
  * @Description: file content
  */
-import { ensureLang } from '../utils/lang'
-// import navLocale from '../i18n/pages/sidebar.json'
-
-// Mapping the first sub link to the nav link to avoid 404 error.
-
-
 export const nav = [
   {
     text: '指南',

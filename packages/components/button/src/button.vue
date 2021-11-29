@@ -6,7 +6,7 @@
  * @Description: file content
 -->
 <template>
-  <button>
+  <button style="color: red;">
     mo-button
   </button>
 </template>
@@ -14,9 +14,7 @@
 <script lang="ts">
 import {  defineComponent } from 'vue'
 export default defineComponent({
-  name: 'MButton',
-
- 
+  name: 'm-button',
 
   setup(props, { emit }) {
     
