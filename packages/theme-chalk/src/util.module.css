@@ -1,0 +1,84 @@
+/* 盒子 */
+.box-sizing--border-box, .border-box{
+  box-sizing: border-box;
+}
+
+/* 布局 */
+.float--right{
+  float: right;
+}
+.float--right:before,
+.float-right:after{
+  content: "";
+  /* 注意 display: block 和 clear:both; 共同存在才能清除浮动 */
+  display: block;
+}
+.float-right:after{
+  clear:both;
+}
+
+
+/* 清除浮动 */
+.clear-both{
+  clear: both;
+}
+
+/* flex 布局 */
+.display--flex, .flex{
+  display: flex;
+}
+.justify-content--space-between, .space-between{
+  justify-content: space-between;
+}
+
+/* 行内块 */
+.display--inline-block, .inline-block{
+  display: inline-block;
+}
+
+/* 占位隐藏 */
+.visibility--hidden, .hidden{
+  visibility: hidden;
+}
+
+/* text align */
+.text-align--left, .text-align--l{
+  text-align: left;
+}
+.text-align--center, .text-align--center{
+  text-align: center;
+}
+.text-align--right, .text-align--right{
+  text-align: right;
+}
+
+/* cursor */
+.cursor--pointer, .pointer{
+  cursor: pointer;
+}
+.cursor--not-allowed, .not-allowed{
+  cursor: not-allowed;
+}
+
+/* 定位 */
+.position--relative, .relative{
+  position: relative;
+}
+.position--absolute, .absolute{
+  position: absolute;
+}
+.position--fixed, .fixed{
+  position: fixed;
+}
+
+/* 内容溢出时用三点表示 */
+.overflow--dot{
+  overflow: hidden;
+  white-space: nowrap;
+  /*
+    text-overflow 属性规定当文本溢出包含元素时发生的事情
+    显示省略符号来代表被修剪的文本
+  */
+  text-overflow: ellipsis;
+}
+

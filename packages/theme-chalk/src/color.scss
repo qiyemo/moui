@@ -1,0 +1,81 @@
+:root{
+  /* 中性色板 中性色包含了黑、白、灰。能够令页面信息具备良好的主次关系。 */
+  --color-gray-1: #ffffff;
+  --color-gray-2: #fafafa;
+  --color-gray-3: #f5f5f5;
+  --color-gray-4: #f0f0f0;
+  --color-gray-5: #d9d9d9;
+  --color-gray-6: #bfbfbf;
+  --color-gray-7: #8c8c8c;
+  --color-gray-8: #595959;
+  --color-gray-9: #434343;
+  --color-gray-10: #262626;
+  --color-gray-11: #1f1f1f;
+  --color-gray-12: #141414;
+  --color-gray-13: #000000;
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-transparent: transparent;
+
+
+   /*
+    功能色
+    功能色代表了明确的信息以及状态，比如成功、出错、失败、提醒、链接等。功能色的选取需要遵守用户对色彩的基本认知。
+  */
+  /* 成功 */
+  --color-success: var(--color-green-6);
+  --color-success-light: var(--color-green-2);
+  --color-success-lighter: var(--color-green-1);
+  /* 警告 */
+  --color-warn: var(--color-gold-6);
+  --color-warn-light: var(--color-gold-2);
+  --color-warn-lighter: var(--color-gold-1);
+  /* 错误 */
+  --color-danger: var(--color-red-5);
+  --color-danger-light: var(--color-red-2);
+  --color-danger-lighter: var(--color-red-1);
+    /* 信息 */
+  --color-gray: var(--color-gray-7);
+  --color-gray-light: var(--color-gray-6);
+  --color-gray-lighter: var(--color-gray-5);
+
+  /*
+    中性色
+    Ant Design 的中性色主要被大量的应用在界面的文字部分，
+    此外背景、边框、分割线等场景中也非常常见。
+    产品中性色的定义需要考虑深色背景以及浅色背景的差异，同时结合 WCAG 2.0 标准。
+    Ant Design 的中性色在落地的时候是按照透明度的方式实现的
+  */
+  /* 文字颜色 */
+  --color-font-titile:rgba(0,0,0, .85);
+  --color-font-normal: var(--color-font-titile);
+  --color-font-secondary:  rgba(0,0,0, .45);
+  --color-font-disable: rgba(0,0,0, .25);
+  /* 边框 */
+  --color-border: rgba(0,0,0, .15);
+  /* 分割线 */
+  --color-dividers: rgba(0,0,0, .6);
+  /* 背景 */
+  --color-bg: rgba(0,0,0, .4);
+  /* 表格头 */
+  --color-tbl-header: rgba(0,0,0, .2);
+
+  /*
+    中性色
+    Element-plus 中性色用于文本、背景和边框颜色。 通过运用不同的中性色，来表现层次结构。
+  */
+  /* 文字颜色 */
+  --color-font-primary:#303133;
+  --color-font-regular: #606266;
+  --color-font-secondary:  #909399;
+  --color-font-placeholder: #C0C4CC;
+  /* 边框 */
+  --color-border-base: #DCDFE6;
+  --color-border-light: #E4E7ED;
+  --color-border-lighter: #EBEEF5;
+  --color-border-extra-light: #F2F6FC;
+
+
+
+}
