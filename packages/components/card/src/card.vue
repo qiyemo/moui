@@ -26,14 +26,17 @@ export default defineComponent({
   border-style: solid;
   border-width: 1px;
 }
-.m-card .m-card__header, .m-card .m-card__body{
+.m-card__header,.m-card__body{
   padding: var(--spacing-middle);
 }
-.m-card .m-card__header{
+.m-card__header{
   border-bottom: solid 1px var(--color-border-light);
 }
-.m-card .m-card__body{
+.m-card__body{
 
+}
+.m-card-small{
+  
 }
 </style>
 
