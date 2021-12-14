@@ -6,57 +6,48 @@
  * @Description: file content
  */
 
-import { inject, computed, getCurrentInstance, unref } from 'vue'
-import { elFormKey, elFormItemKey } from '../../tokens'
-import { buildProps } from '../../utils/props'
-import { useGlobalConfig } from '../../utils/util'
+import { inject, computed, getCurrentInstance, unref } from 'vue';
+import { elFormKey, elFormItemKey } from '../../tokens';
+import { buildProps } from '../../utils/props';
+import { useGlobalConfig } from '../../utils/util';
 
-import type { ExtractPropTypes } from 'vue'
-import type { MaybeRef } from '@vueuse/core'
+import type { ExtractPropTypes } from 'vue';
+import type { MaybeRef } from '@vueuse/core';
 
-const sizes = ['', 'large', 'medium', 'small', 'mini'] as const
+const sizes = ['', 'large', 'medium', 'small', 'mini'] as const;
 
 export const useFormItemProps = buildProps({
   size: {
     type: String,
     values: sizes,
-    default: '',
+    default: ''
   },
-  disabled: Boolean,
-} as const)
+  disabled: Boolean
+} as const);
 
-export type UseFormItemProps = ExtractPropTypes<typeof useFormItemProps>
+export type UseFormItemProps = ExtractPropTypes<typeof useFormItemProps>;
 
 export type LocalFallbacks = {
-  size?: MaybeRef<UseFormItemProps['size'] | undefined>
-  disabled?: MaybeRef<UseFormItemProps['disabled'] | undefined>
-}
+  size?: MaybeRef<UseFormItemProps['size'] | undefined>;
+  disabled?: MaybeRef<UseFormItemProps['disabled'] | undefined>;
+};
 
 export const useFormItem = ({ size, disabled }: LocalFallbacks) => {
-  const vm = getCurrentInstance()
-  const $ELEMENT = useGlobalConfig()
+  const vm = getCurrentInstance();
+  const $ELEMENT = useGlobalConfig();
 
   // vm.props is not reactive so we use the reactive one here.
-  const props = vm.proxy.$props as UseFormItemProps
-  const form = inject(elFormKey, undefined)
-  const formItem = inject(elFormItemKey, undefined)
+  const props = vm.proxy.$props as UseFormItemProps;
+  const form = inject(elFormKey, undefined);
+  const formItem = inject(elFormItemKey, undefined);
 
   return {
     size: computed(() => {
       // TODO, fallback to default size like 'medium/large' instead of empty string
-      return (
-        props.size ||
-        unref(size) ||
-        formItem?.size ||
-        form?.size ||
-        $ELEMENT.size ||
-        ''
-      )
+      return props.size || unref(size) || formItem?.size || form?.size || $ELEMENT.size || '';
     }),
     disabled: computed(() => {
-      return (
-        props.disabled === true || unref(disabled) || form?.disabled || false
-      )
-    }),
-  }
-}
+      return props.disabled === true || unref(disabled) || form?.disabled || false;
+    })
+  };
+};

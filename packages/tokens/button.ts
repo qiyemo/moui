@@ -5,13 +5,13 @@
  * @LastEditTime: 2021-10-19 16:55:05
  * @Description: file content
  */
-import type { InjectionKey } from 'vue'
+import type { InjectionKey } from 'vue';
 
 import type { ButtonProps } from '../components/button';
 
 export interface ElButtonGroupContext {
-  size?: ButtonProps['size']
-  type?: ButtonProps['type']
+  size?: ButtonProps['size'];
+  type?: ButtonProps['type'];
 }
 
-export const elButtonGroupKey: InjectionKey<ElButtonGroupContext> = Symbol()
+export const elButtonGroupKey: InjectionKey<ElButtonGroupContext> = Symbol();

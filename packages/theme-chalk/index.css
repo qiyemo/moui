@@ -1,9 +1,8 @@
-@import './color.scss';
+@import './default/default.css';
+@import './color.css';
 @import './border.css';
 @import './font.css';
 @import './spacing.css';
-@import './util.module.css';
+@import './util.css';
 /* 覆盖组件库主题 */
 @import './overwrite.css';
-@import './card.css';
-

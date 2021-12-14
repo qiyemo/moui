@@ -5,5 +5,5 @@
  * @LastEditTime: 2021-10-19 16:53:30
  * @Description: file content
  */
-export * from './button'
-export * from './form'
+export * from './button';
+export * from './form';

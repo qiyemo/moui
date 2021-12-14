@@ -9,15 +9,39 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    // 如此做，TS 会警告你不要使用隔离（isolated）转译的功能
+    "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "types": [
+      /*
+        提供以下类型定义补充：
+        - 资源导入 (例如：导入一个 .svg 文件)
+        - import.meta.env 上 Vite 注入的环境变量的类型定义
+        - import.meta.hot 上的 HMR API 类型定义
+      */
+      "vite/client"
+    ],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["packages/*"],
+      "@moui/*": ["packages/components/*"]
+    }
   },
+
   "include": [
-    "play/**/*.ts", "play/**/*.d.ts", "play/**/*.tsx", "play/**/*.vue",
-    "packages/**/*.ts", "packages/**/*.d.ts", "packages/**/*.tsx", "packages/**/*.vue",
-    "docs/**/*.ts", "docs/**/*.d.ts", "docs/**/*.tsx", "docs/**/*.vue","docs/.vitepress/**/.ts"
-  ]
+    "play/**/*.ts",
+    "play/**/*.d.ts",
+    "play/**/*.tsx",
+    "play/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.d.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue"
+  ],
+  "exclude": ["node_modules"]
 }

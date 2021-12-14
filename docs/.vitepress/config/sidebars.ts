@@ -6,7 +6,6 @@
  * @Description: file content
  */
 
-
 export const sidebar = {
   '/guide/': [
     {
@@ -30,6 +29,6 @@ export const sidebar = {
     {
       text: '按钮',
       link: '/components/button'
-    },
+    }
   ]
-}
+};

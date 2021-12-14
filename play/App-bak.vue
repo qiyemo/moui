@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import ThemeSelector from './components/theme-selector.vue';
+import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <template>
-  <div>
-    <ThemeSelector></ThemeSelector>
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <hello-world msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
 <style>

@@ -5,4 +5,4 @@
  * @LastEditTime: 2021-10-19 17:17:30
  * @Description: file content
  */
-export * from './use-form-item'
+export * from './use-form-item';

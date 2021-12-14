@@ -5,14 +5,8 @@
  * @LastEditTime: 2021-10-19 16:31:50
  * @Description: file content
  */
-import { NOOP } from "@vue/shared";
-import type { SFCWithInstall } from "./types";
-
-export const withInstall = <T, E extends Record<string, any>>(
-  main: T,
-  extra?: E
-) => {
-  (main as SFCWithInstall<T>).install = (app): void => {
+export const withInstall = (main, extra = undefined) => {
+  main.install = (app): void => {
     for (const comp of [main, ...Object.values(extra ?? {})]) {
       app.component(comp.name, comp);
     }
@@ -20,22 +14,15 @@ export const withInstall = <T, E extends Record<string, any>>(
 
   if (extra) {
     for (const [key, comp] of Object.entries(extra)) {
-      (main as any)[key] = comp;
+      main[key] = comp;
     }
   }
-  return main as SFCWithInstall<T> & E;
+  return main;
 };
 
-export const withInstallFunction = <T>(fn: T, name: string) => {
-  (fn as SFCWithInstall<T>).install = (app) => {
+export const withInstallFunction = (fn, name) => {
+  fn.install = (app) => {
     app.config.globalProperties[name] = fn;
   };
-
-  return fn as SFCWithInstall<T>;
-};
-
-export const withNoopInstall = <T>(component: T) => {
-  (component as SFCWithInstall<T>).install = NOOP;
-
-  return component as SFCWithInstall<T>;
+  return fn;
 };

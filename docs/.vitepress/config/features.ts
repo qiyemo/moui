@@ -6,5 +6,5 @@
  * @Description: file content
  */
 export const features = {
-  theme: false,
-}
+  theme: false
+};
