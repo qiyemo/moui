@@ -5,13 +5,13 @@
  * @LastEditTime: 2021-10-19 16:31:50
  * @Description: file content
  */
-export const withInstall = (main, extra = undefined) => {
-  main.install = (app): void => {
-    for (const comp of [main, ...Object.values(extra ?? {})]) {
+
+export const withInstall = (main: any, extra: any[] = []) => {
+  main.install = (app) => {
+    for (const comp of [main, ...extra]) {
       app.component(comp.name, comp);
     }
   };
-
   if (extra) {
     for (const [key, comp] of Object.entries(extra)) {
       main[key] = comp;
@@ -20,9 +20,4 @@ export const withInstall = (main, extra = undefined) => {
   return main;
 };
 
-export const withInstallFunction = (fn, name) => {
-  fn.install = (app) => {
-    app.config.globalProperties[name] = fn;
-  };
-  return fn;
-};
+export default withInstall;

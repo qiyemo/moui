@@ -1,3 +1,9 @@
+<script lang="ts">
+export default { name: 'MCard' };
+</script>
+<script setup lang="ts">
+const bodyStyle: any = {};
+</script>
 <template>
   <div class="m-card">
     <div class="m-card__header font--title3">
@@ -8,15 +14,6 @@
     </div>
   </div>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue';
-import { cardProps } from './card';
-
-export default defineComponent({
-  name: 'MCard',
-  props: cardProps
-});
-</script>
 <style>
 .m-card {
   box-sizing: border-box;

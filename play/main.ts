@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
+import Moui from '@/components';
 import App from './App.vue';
+import '@/theme/index.css';
 
-import '@/theme-chalk/index.css';
-
-createApp(App).mount('#app');
+const app = createApp(App).use(Moui);
+app.mount('#app');

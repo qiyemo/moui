@@ -6,14 +6,14 @@
  * @Description: file content
  */
 export const nav = [
-  {
-    text: '指南',
-    link: '/guide/',
-    activeMatch: '^/guide/'
-  },
+  // {
+  //   text: '指南',
+  //   link: '/guide/',
+  //   activeMatch: '^/guide/'
+  // },
   {
     text: '组件',
-    link: '/components/button',
+    link: '/components/update-log',
     activeMatch: '^/components/'
   }
 ];

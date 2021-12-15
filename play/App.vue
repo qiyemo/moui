@@ -4,6 +4,12 @@ import ThemeSelector from './components/theme-selector.vue';
 
 <template>
   <div>
+    <m-card>
+      <template #header>
+        <div>卡片头</div>
+      </template>
+      <div>卡片内容</div>
+    </m-card>
     <ThemeSelector></ThemeSelector>
   </div>
 </template>

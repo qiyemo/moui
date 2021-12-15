@@ -6,6 +6,8 @@
  * @Description: file content
  */
 
+import path from 'path';
+
 export const sidebar = {
   '/guide/': [
     {
@@ -18,17 +20,17 @@ export const sidebar = {
       text: '更新日志',
       link: '/components/update-log'
     },
+    // {
+    //   text: '开发指南',
+    //   link: '/components/develop-guide'
+    // },
+    // {
+    //   text: '安装',
+    //   link: '/components/install'
+    // },
     {
-      text: '开发指南',
-      link: '/components/develop-guide'
-    },
-    {
-      text: '安装',
-      link: '/components/install'
-    },
-    {
-      text: '按钮',
-      link: '/components/button'
+      text: '卡片',
+      link: '/components/card'
     }
   ]
 };

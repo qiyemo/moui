@@ -1,0 +1,23 @@
+:root {
+  /*
+    品牌色
+    需要先明确品牌色在界面中的使用场景及范围。在基础色板中选择主色，我们建议选择色板从浅至深的第六个颜色作为主色。
+    应用场景包括：关键行动点，操作状态、重要信息高亮
+  */
+  --color-primary: var(--color-orange-6);
+  --color-primary-1: var(--color-orange-1);
+  --color-primary-2: var(--color-orange-2);
+  --color-primary-3: var(--color-orange-3);
+  --color-primary-4: var(--color-orange-4);
+  --color-primary-5: var(--color-orange-5);
+  --color-primary-6: var(--color-orange-6);
+  --color-primary-7: var(--color-orange-7);
+  --color-primary-8: var(--color-orange-8);
+  --color-primary-9: var(--color-orange-9);
+  --color-primary-10: var(--color-orange-10);
+  --color-primary-light-1: var(--color-orange-5);
+  --color-primary-light-2: var(--color-orange-4);
+  --color-primary-light-3: var(--color-orange-3);
+  --color-primary-light-4: var(--color-orange-2);
+  --color-primary-light-5: var(--color-orange-1);
+}

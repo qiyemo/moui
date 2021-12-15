@@ -11,7 +11,7 @@ import { sidebar } from './config/sidebars';
 import { nav } from './config/nav';
 
 module.exports = {
-  title: 'Hellow World',
+  title: 'MOUI',
   description: 'Hellow World',
   lang: 'zh-CN',
   themeConfig: {
