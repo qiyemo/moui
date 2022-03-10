@@ -12,10 +12,9 @@ const comps = {
 };
 
 export default {
-  install: (app) => {
-    console.log('component install:', app, comps);
-    for (const key in comps) {
+  install: (app: any) => {
+    Object.keys(comps).forEach((key) => {
       app.use(comps[key]);
-    }
+    });
   }
 };

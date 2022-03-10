@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ThemeSelector from './components/theme-selector.vue';
 </script>
-
 <template>
   <div>
     <m-card>
@@ -13,7 +12,6 @@ import ThemeSelector from './components/theme-selector.vue';
     <ThemeSelector></ThemeSelector>
   </div>
 </template>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
