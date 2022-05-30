@@ -3,12 +3,13 @@ import ThemeSelector from './components/theme-selector.vue';
 </script>
 <template>
   <div>
-    <m-card>
+    <!-- <m-card>
       <template #header>
         <div>卡片头</div>
       </template>
       <div>卡片内容</div>
-    </m-card>
+    </m-card> -->
+    <m-button  plain="true">warning</m-button>
     <ThemeSelector></ThemeSelector>
   </div>
 </template>

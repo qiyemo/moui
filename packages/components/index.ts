@@ -1,14 +1,16 @@
 /*
  * @Author: qiye
  * @Date: 2021-10-19 16:25:32
- * @LastEditors: qiye
- * @LastEditTime: 2021-10-19 16:26:00
+ * @LastEditors: zj
+ * @LastEditTime: 2022-05-30 15:44:27
  * @Description: file content
  */
 import MCard from './card';
+import MButton from './button';
 
 const comps = {
-  MCard
+  MCard,
+  MButton
 };
 
 export default {
