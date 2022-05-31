@@ -2,15 +2,21 @@
  * @Author: qiye
  * @Date: 2021-10-19 16:25:32
  * @LastEditors: zj
- * @LastEditTime: 2022-05-30 15:44:27
+ * @LastEditTime: 2022-05-31 17:12:29
  * @Description: file content
  */
 import MCard from './card';
 import MButton from './button';
+import MBorder from './border';
+import MContainer from './container';
+import MPagenation from './pagenation';
 
 const comps = {
   MCard,
-  MButton
+  MButton,
+  MBorder,
+  MContainer,
+  MPagenation
 };
 
 export default {
