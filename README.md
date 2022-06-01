@@ -36,3 +36,23 @@ vue 组件库
 
 
 
+#### 4. m-pagenation（分页）
+
+方法：
+
+- currentChange（点击分页的上、下一页的按钮，以及具体分页的回调）：function（val  =>  val参数（页码）
+
+属性值：
+
+- currentPage（类型）：number  （默认1）
+
+- total（数据总数）：number
+
+- pageSize（每页数据数量）：number
+
+- showPageNo（分页两个省略号之间的值数量）：number
+
+  
+
+  
+

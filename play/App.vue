@@ -2,19 +2,20 @@
  * @Author: zj
  * @LastEditors: zj
  * @Date: 2022-05-30 14:21:00
- * @LastEditTime: 2022-05-31 18:06:47
+ * @LastEditTime: 2022-06-01 13:50:27
 -->
 <script setup lang="ts">
+import { reactive } from '@vue/reactivity';
 import ThemeSelector from './components/theme-selector.vue';
-const page = {
-  currentPage: 1,
-  total: 200,
+const page = reactive({
+  currentPage: 5,
+  total: 300,
   pageSize: 10,
   showPageNo: 5,
-  currentChange: () => {
-    console.log('123')
+  currentChange: (value) => {
+    page.currentPage = value;
   },
-}
+})
 </script>
 <template>
   <div>
@@ -39,6 +40,7 @@ const page = {
       </template>
     </m-container> -->
     <!-- <ThemeSelector></ThemeSelector> -->
+    <m-tabs></m-tabs>
     <m-pagenation
       :currentPage="page.currentPage"
       :total="page.total"
