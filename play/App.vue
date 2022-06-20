@@ -1,21 +1,26 @@
 <!--
  * @Author: zj
- * @LastEditors: zj
+ * @LastEditors: JESS
  * @Date: 2022-05-30 14:21:00
- * @LastEditTime: 2022-06-01 13:50:27
+ * @LastEditTime: 2022-06-20 19:18:33
 -->
 <script setup lang="ts">
-import { reactive } from '@vue/reactivity';
+import { reactive, ref,  } from '@vue/reactivity';
 import ThemeSelector from './components/theme-selector.vue';
-const page = reactive({
-  currentPage: 5,
-  total: 300,
-  pageSize: 10,
-  showPageNo: 5,
-  currentChange: (value) => {
-    page.currentPage = value;
-  },
-})
+const data = ref([{
+  title: '标签1',
+  content: '1的内容'
+}, {
+  title: '标签2',
+  content: '2的内容'
+}, {
+  title: '标签3',
+  content: '3的内容'
+}])
+
+const handle = (val) => {
+
+}
 </script>
 <template>
   <div>
@@ -40,14 +45,21 @@ const page = reactive({
       </template>
     </m-container> -->
     <!-- <ThemeSelector></ThemeSelector> -->
-    <m-tabs></m-tabs>
-    <m-pagenation
-      :currentPage="page.currentPage"
-      :total="page.total"
-      :pageSize="page.pageSize"
-      :showPageNo="page.showPageNo"
-      @currentChange="page.currentChange"
-    ></m-pagenation>
+    <!-- <m-pagenation :currentPage="page.currentPage" :total="page.total" :pageSize="page.pageSize"
+      :showPageNo="page.showPageNo" @currentChange="page.currentChange"></m-pagenation> -->
+    <!-- <m-tabs :data="data"></m-tabs> -->
+    <m-tabs>
+      <template #pane>
+        <div class="pane" name="first" @click="handle">睡觉</div>
+        <div class="pane" name="second">吃饭</div>
+        <div class="pane" name="fourth">打豆豆</div>
+      </template>
+      <template #nav>
+        <div name="first">睡觉</div>
+        <div name="second">吃饭</div>
+        <div name="fourth">打豆豆</div>
+      </template>
+    </m-tabs>
   </div>
 </template>
 <style>

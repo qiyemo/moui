@@ -23,6 +23,7 @@
     "semi": true
   },
   "dependencies": {
+    "mitt": "^3.0.0",
     "normalize.css": "^8.0.1",
     "sass": "^1.52.1",
     "scss": "^0.2.4",
