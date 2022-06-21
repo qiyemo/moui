@@ -2,21 +2,13 @@
  * @Author: zj
  * @LastEditors: JESS
  * @Date: 2022-05-30 14:21:00
- * @LastEditTime: 2022-06-20 19:18:33
+ * @LastEditTime: 2022-06-21 18:24:56
 -->
 <script setup lang="ts">
-import { reactive, ref,  } from '@vue/reactivity';
-import ThemeSelector from './components/theme-selector.vue';
-const data = ref([{
-  title: '标签1',
-  content: '1的内容'
-}, {
-  title: '标签2',
-  content: '2的内容'
-}, {
-  title: '标签3',
-  content: '3的内容'
-}])
+import { reactive, ref, } from '@vue/reactivity';
+// import ThemeSelector from './components/theme-selector.vue';
+const myName = ref('first')
+
 
 const handle = (val) => {
 
@@ -48,17 +40,13 @@ const handle = (val) => {
     <!-- <m-pagenation :currentPage="page.currentPage" :total="page.total" :pageSize="page.pageSize"
       :showPageNo="page.showPageNo" @currentChange="page.currentChange"></m-pagenation> -->
     <!-- <m-tabs :data="data"></m-tabs> -->
-    <m-tabs>
-      <template #pane>
-        <div class="pane" name="first" @click="handle">睡觉</div>
-        <div class="pane" name="second">吃饭</div>
-        <div class="pane" name="fourth">打豆豆</div>
-      </template>
-      <template #nav>
-        <div name="first">睡觉</div>
-        <div name="second">吃饭</div>
-        <div name="fourth">打豆豆</div>
-      </template>
+    <m-tabs :value="myName" type="border-card" stretch closable label="1wwwww">
+      <m-tabs-pane label="用户管理" name="first">用户管理的模块区域</m-tabs-pane>
+      <m-tabs-pane label="配置管理" name="second">
+        配置管理的模块区域
+      </m-tabs-pane>
+      <m-tabs-pane label="角色管理" name="third">角色管理的模块区域</m-tabs-pane>
+      <m-tabs-pane label="定时任务补偿" name="fourth">定时任务补偿的模块区域</m-tabs-pane>
     </m-tabs>
   </div>
 </template>

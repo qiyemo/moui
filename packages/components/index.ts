@@ -1,8 +1,8 @@
 /*
  * @Author: qiye
  * @Date: 2021-10-19 16:25:32
- * @LastEditors: zj
- * @LastEditTime: 2022-06-01 13:48:43
+ * @LastEditors: JESS
+ * @LastEditTime: 2022-06-21 10:12:35
  * @Description: file content
  */
 import MCard from './card';
@@ -11,6 +11,7 @@ import MBorder from './border';
 import MContainer from './container';
 import MPagenation from './pagenation';
 import MTabs from './tabs';
+import MTabsPane from './tabsPane';
 
 const comps = {
   MCard,
@@ -18,7 +19,8 @@ const comps = {
   MBorder,
   MContainer,
   MPagenation,
-  MTabs
+  MTabs,
+  MTabsPane
 };
 
 export default {

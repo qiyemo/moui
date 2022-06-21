@@ -54,5 +54,29 @@ vue 组件库
 
   
 
+
+#### 5.  m-tabs
+
+属性： 
+
+- value： 选项卡默认展示项【name属性的值】----（string）： 默认为“ ”；
+
+- stretch： 选项卡按钮是否自动撑开  -----（boolean）: 默认为 false;
+
+- closable: 选项卡是否显示可取消按钮 ----- （boolean）: 默认为 false;
+
+- type： 选项卡的风格类型 ---- （string)  ： 默认为“ ” , 其他值（border-card）；
+
   
 
+#### 5.  m-tabs-pane
+
+属性： 
+
+- label： 选项卡标题  ----（string）： 默认为“ ”；
+
+- name： 与选项卡按钮绑定值且与value对应的值，表示选项卡别名  -----（string）: 默认为“ ”;
+
+- disabled: 选项卡是否禁用 ----- （boolean）: 默认为 false;
+
+  
