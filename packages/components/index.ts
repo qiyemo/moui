@@ -2,7 +2,7 @@
  * @Author: qiye
  * @Date: 2021-10-19 16:25:32
  * @LastEditors: JESS
- * @LastEditTime: 2022-06-21 10:12:35
+ * @LastEditTime: 2022-06-22 13:35:57
  * @Description: file content
  */
 import MCard from './card';
@@ -12,6 +12,7 @@ import MContainer from './container';
 import MPagenation from './pagenation';
 import MTabs from './tabs';
 import MTabsPane from './tabsPane';
+import MInput from './input';
 
 const comps = {
   MCard,
@@ -20,7 +21,8 @@ const comps = {
   MContainer,
   MPagenation,
   MTabs,
-  MTabsPane
+  MTabsPane,
+  MInput
 };
 
 export default {

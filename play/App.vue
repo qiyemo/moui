@@ -2,62 +2,73 @@
  * @Author: zj
  * @LastEditors: JESS
  * @Date: 2022-05-30 14:21:00
- * @LastEditTime: 2022-06-21 18:24:56
+ * @LastEditTime: 2022-06-22 12:25:22
 -->
 <script setup lang="ts">
-import { reactive, ref, } from '@vue/reactivity';
-// import ThemeSelector from './components/theme-selector.vue';
-const myName = ref('first')
+import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
-
-const handle = (val) => {
-
+let routeList = ref([]);
+let route = useRouter();
+onMounted(() => {
+  routeList.value = route.options.routes
+})
+const routeChange = (item) => {
+  route.push({ path: `${item.path}` })
 }
 </script>
 <template>
-  <div>
-    <!-- <m-card>
-      <template #header>
-        <div>卡片头</div>
-      </template>
-      <div>卡片内容</div>
-    </m-card> -->
-    <!-- <m-container type="primary">
-      <template #sider>
-        <div class="card">卡片头</div>
-      </template>
-      <template #header>
-        <div>头</div>
-      </template>
-      <template #main>
-        <div>主题</div>
-      </template>
-      <template #footer>
-        <div>底部</div>
-      </template>
-    </m-container> -->
+  <div id="app">
     <!-- <ThemeSelector></ThemeSelector> -->
-    <!-- <m-pagenation :currentPage="page.currentPage" :total="page.total" :pageSize="page.pageSize"
-      :showPageNo="page.showPageNo" @currentChange="page.currentChange"></m-pagenation> -->
-    <!-- <m-tabs :data="data"></m-tabs> -->
-    <m-tabs :value="myName" type="border-card" stretch closable label="1wwwww">
-      <m-tabs-pane label="用户管理" name="first">用户管理的模块区域</m-tabs-pane>
-      <m-tabs-pane label="配置管理" name="second">
-        配置管理的模块区域
-      </m-tabs-pane>
-      <m-tabs-pane label="角色管理" name="third">角色管理的模块区域</m-tabs-pane>
-      <m-tabs-pane label="定时任务补偿" name="fourth">定时任务补偿的模块区域</m-tabs-pane>
-    </m-tabs>
+    <div class="layout">
+      <template v-for="(item, index) in routeList">
+        <m-button class="btn" type="info" :key="index" @click="routeChange(item)" v-if="index > 0">
+          {{
+              item.name
+          }}
+        </m-button>
+      </template>
+    </div>
+    <router-view></router-view>
   </div>
 </template>
-<style>
+<style lang="scss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  padding: 10px 20px;
+  padding: 50px;
+}
+
+.layout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  .btn {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px 20px 0; // 间隙为20px
+    // padding-top: 20px;
+    border: 1px solid #888;
+    box-sizing: border-box;
+
+    width: calc((100% - 60px) / 4); // 我这里一行显示4个 所以是/4  一行显示几个就除以几
+    // 这里的60px = (分布个数4-1)*间隙20px, 可以根据实际的分布个数和间隙区调整
+    min-width: calc((100% - 60px) / 10);
+    max-width: calc((100% - 60px) / 10);
+
+    &:nth-child(10n + 10) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 </style>

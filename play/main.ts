@@ -3,7 +3,7 @@
  * @Author: JESS
  * @Date: 2022-06-20 14:00:23
  * @FilePath: \moui\play\main.ts
- * @LastEditTime: 2022-06-20 15:51:18
+ * @LastEditTime: 2022-06-22 09:15:45
  * @LastEditors: JESS
  */
 import { createApp } from 'vue';
@@ -12,6 +12,7 @@ import App from './App.vue';
 import 'normalize.css';
 import '@/theme/index.css';
 import './styles/index.css';
+import router from './router'
 // 引入 mitt
 import mitt from 'mitt';
 // 初始化 mitt
@@ -22,7 +23,7 @@ declare module "vue" {
         $Bus: typeof Mit
     }
 }
-const app = createApp(App).use(Moui);
+const app = createApp(App).use(Moui).use(router);
 // 挂载全局Api
 app.config.globalProperties.$Bus = Mit
 app.mount('#app');

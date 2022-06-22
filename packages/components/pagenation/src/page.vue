@@ -1,15 +1,16 @@
 <!--
  * @Author: zj
- * @LastEditors: zj
+ * @LastEditors: JESS
  * @Date: 2022-05-31 16:05:24
- * @LastEditTime: 2022-06-01 13:42:47
+ * @LastEditTime: 2022-06-22 10:51:10
 -->
 <template>
   <div class="pageination">
     <button :class="{ disabled: currentPage === 1 }" @click="changePage(false)">上一页</button>
     <button v-if="startNumAndEndNum.start > 1" @click="changePage(1)">1</button>
     <button v-if="startNumAndEndNum.start > 2">...</button>
-    <button v-for="(item, index) in startNumAndEndNum.end" :key="index" :class="{ active: currentPage === item }" v-show="item >= startNumAndEndNum.start" @click="changePage(item)">
+    <button v-for="(item, index) in startNumAndEndNum.end" :key="index" :class="{ active: currentPage === item }"
+      v-show="item >= startNumAndEndNum.start" @click="changePage(item)">
       {{ item }}
     </button>
     <button v-if="startNumAndEndNum.end < pages - 1">...</button>
@@ -107,37 +108,7 @@ onMounted(() => {
   console.log(props);
 });
 </script>
- 
+
 <style lang="scss" scoped>
-.pageination {
-  button {
-    margin: 0 5px;
-    background-color: #f4f4f5;
-    color: #606266;
-    outline: none;
-    border-radius: 2px;
-    pad: 0 4px;
-    vertical-align: top;
-    display: inline-block;
-    font-size: 13px;
-    min-width: 35.5px;
-    height: 28px;
-    line-height: 28px;
-    cursor: pointer;
-    box-sizing: border-box;
-    text-align: center;
-    border: 0;
-
-    &.active {
-      background-color: #409eff;
-      color: #fff;
-      cursor: not-allowed;
-    }
-
-    &.disabled {
-      cursor: not-allowed;
-      color: #ccc;
-    }
-  }
-}
+@import '../style/index.scss';
 </style>

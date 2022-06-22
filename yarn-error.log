@@ -1,0 +1,74 @@
+Arguments: 
+  E:\nodejs\node.exe C:\Users\jess9\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add vue-router
+
+PATH: 
+  C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;E:\nvm;E:\nvm;E:\Git\cmd;E:\Mysql 数据库\mysql-8.0.27-winx64\bin;C:\Program Files\TortoiseSVN\bin;E:\微信开发者工具\微信web开发者工具\dll;E:\jdk-11\bin;E:\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\jess9\AppData\Local\Microsoft\WindowsApps;E:\VS code\bin;E:\nvm;E:\nvm;E:\node-v12.22.6-win-x64;;E:\IntelliJ IDEA 2021.3.1\bin;;C:\Users\jess9\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.19.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\jess9\Desktop\速成项目\moui\node_modules\esbuild-windows-64\esbuild.exe'
+
+npm manifest: 
+  {
+    "name": "moui",
+    "version": "1.0.0",
+    "description": "vue component",
+    "main": "index.js",
+    "repository": "https://github.com/moqiye/moui.git",
+    "author": "qiye <coderqiye@163.com>",
+    "license": "MIT",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "prettier": {
+      "eslintIntegration": true,
+      "stylelintIntegration": true,
+      "useTabs": false,
+      "tabWidth": 2,
+      "printWidth": 100,
+      "singleQuote": true,
+      "trailingComma": "none",
+      "bracketSpacing": true,
+      "semi": true
+    },
+    "dependencies": {
+      "mitt": "^3.0.0",
+      "normalize.css": "^8.0.1",
+      "sass": "^1.52.1",
+      "scss": "^0.2.4",
+      "vue": "^3.2.16"
+    },
+    "devDependencies": {
+      "@types/lodash": "^4.14.175",
+      "@types/node": "^16.11.1",
+      "@typescript-eslint/eslint-plugin": "^5.7.0",
+      "@typescript-eslint/parser": "^5.7.0",
+      "@vitejs/plugin-vue": "^1.9.3",
+      "eslint": "^8.4.1",
+      "eslint-config-airbnb-base": "^15.0.0",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-import": "^2.25.3",
+      "eslint-plugin-prettier": "^4.0.0",
+      "eslint-plugin-vue": "^8.2.0",
+      "prettier": "^2.5.1",
+      "typescript": "^4.4.3",
+      "vite": "^2.6.4",
+      "vue-tsc": "^0.3.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

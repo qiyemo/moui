@@ -1,0 +1,67 @@
+.tabs_pane {
+    width: 100%;
+    border-bottom: 2px solid #dddddd;
+    position: relative;
+
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      padding: 10px 15px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    button:hover {
+      color: #409eff;
+    }
+
+    button:disabled {
+      color: #cccccc;
+      cursor: inherit;
+    }
+
+    .blue {
+      color: #409eff !important;
+    }
+
+    .borderCard {
+      padding-top: 11px;
+      bottom: -1px;
+      color: #409eff !important;
+      border-left: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+      margin-left: -1px;
+      background-color: #fff;
+    }
+
+    .line {
+      position: absolute;
+      bottom: -2;
+      height: 2px;
+      background-color: #409eff;
+      transition: left 0.2s linear;
+    }
+
+    .btn-content {
+      width: 100%;
+    }
+
+    .guan {
+      border-radius: 50%;
+      display: inline-block;
+      padding: 0 3px;
+      margin-left: 2px;
+    }
+
+    .guan:hover {
+      background: #cccccc;
+      color: #fff;
+    }
+  }
+
+  .content {
+    width: 100%;
+    padding: 17px 0px;
+    box-sizing: border-box;
+  }

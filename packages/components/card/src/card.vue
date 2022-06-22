@@ -3,7 +3,7 @@
  * @Author: JESS
  * @Date: 2022-06-20 14:00:23
  * @FilePath: \moui\packages\components\card\src\card.vue
- * @LastEditTime: 2022-06-20 17:44:32
+ * @LastEditTime: 2022-06-22 10:46:52
  * @LastEditors: JESS
 -->
 <script lang="ts">
@@ -22,27 +22,6 @@ const bodyStyle: any = {};
     </div>
   </div>
 </template>
-<style>
-.m-card {
-  box-sizing: border-box;
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--border-shadow-light);
-  border-color: var(--color-border-light);
-  border-style: solid;
-  border-width: 1px;
-}
-
-.m-card__header,
-.m-card__body {
-  padding: var(--spacing-middle);
-  color: var(--color-primary);
-}
-
-.m-card__header {
-  border-bottom: solid 1px var(--color-border-light);
-}
-
-.m-card__body {}
-
-.m-card-small {}
+<style lang="sass" scoped>
+@import '../style/index.css'
 </style>

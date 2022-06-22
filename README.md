@@ -74,9 +74,23 @@ vue 组件库
 属性： 
 
 - label： 选项卡标题  ----（string）： 默认为“ ”；
-
 - name： 与选项卡按钮绑定值且与value对应的值，表示选项卡别名  -----（string）: 默认为“ ”;
-
 - disabled: 选项卡是否禁用 ----- （boolean）: 默认为 false;
 
-  
+#### 6. m-input
+
+属性：
+
+- labelWv： label宽度【Number, String】，默认值（100）；
+- labelHv： label高度【Number, String】： 默认值（30）；
+- labelPosition： label位置 【String】：默认值（top）,其他值（left, right）;
+- type: ： 输入框类型【String】，默认值（text）；
+- value： 输入框默认值【String, Number】，默认值（“ ”）；
+- maxlength： 输入框最大长度【Number】，默认值（“ ”）；
+- minlength： 输入框最大长度【Number】，默认值（“ ”）；
+- showWordLimit： 是否显示输入字数统计；
+- placeholder：输入框占位文本【String】，默认值（“ ”）；
+- disabled： 输入框是否禁用【Boolean】，默认值（false）；
+- width：input宽度【Number, String】，默认值（100）；
+- height：input高度【Number, String】，默认值（30）；
+
