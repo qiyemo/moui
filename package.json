@@ -1,50 +1,41 @@
 {
-  "name": "moui",
+  "name": "mo-ui",
   "version": "1.0.0",
-  "description": "vue component",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/moqiye/moui.git",
-  "author": "qiye <coderqiye@163.com>",
-  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "test": "vitest",
+    "lint": "eslint --fix --ext .ts,.tsx,.vue src",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
+    "test:run": "vitest run",
+    "prepare": "husky install"
   },
-  "prettier": {
-    "eslintIntegration": true,
-    "stylelintIntegration": true,
-    "useTabs": false,
-    "tabWidth": 2,
-    "printWidth": 100,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "bracketSpacing": true,
-    "semi": true
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "@vitejs/plugin-vue": "3.0.3",
+    "@vitejs/plugin-vue-jsx": "2.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/test-utils": "2.0.2",
+    "eslint": "^8.22.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "happy-dom": "6.0.4",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "unocss": "0.45.6",
+    "vite": "3.0.8",
+    "vitest": "0.21.1"
   },
   "dependencies": {
-    "mitt": "^3.0.0",
-    "normalize.css": "^8.0.1",
-    "sass": "^1.52.1",
-    "scss": "^0.2.4",
-    "vue": "^3.2.16",
-    "vue-router": "^4.0.16"
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.14.175",
-    "@types/node": "^16.11.1",
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "@typescript-eslint/parser": "^5.7.0",
-    "@vitejs/plugin-vue": "^1.9.3",
-    "eslint": "^8.4.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.2.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.4.3",
-    "vite": "^2.6.4",
-    "vue-tsc": "^0.3.0"
+    "vue": "3.2.37"
   }
 }
