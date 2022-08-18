@@ -1,6 +1,6 @@
-import { App } from 'vue';
-import 'uno.css';
-import MButton from './button';
+import { App } from "vue";
+import "uno.css";
+import MButton from "./button";
 
 // 导出单独的组件
 export { MButton };
@@ -9,5 +9,5 @@ export { MButton };
 export default {
   install(app: App): void {
     app.component(MButton.name, MButton);
-  }
+  },
 };
