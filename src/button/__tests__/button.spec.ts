@@ -44,6 +44,6 @@ describe("color", () => {
       },
     });
     const classes = wrapper.classes().map((v) => v.replace("\n", ""));
-    expect(classes.includes("bg-red-500")).toBe(true);
+    expect(classes.includes('bg-red-500')).toBe(true);
   });
 });
