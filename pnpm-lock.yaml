@@ -13,6 +13,7 @@ specifiers:
   eslint: ^8.22.0
   eslint-config-airbnb-base: ^15.0.0
   eslint-formatter-pretty: ^4.1.0
+  eslint-plugin-import: ^2.26.0
   eslint-plugin-json: ^3.1.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.3.0
@@ -40,6 +41,7 @@ devDependencies:
   eslint: 8.22.0
   eslint-config-airbnb-base: 15.0.0_2iahngt3u2tkbdlu6s4gkur3pu
   eslint-formatter-pretty: 4.1.0
+  eslint-plugin-import: 2.26.0_3bh5nkk7utn7e74vrwtv6rxmt4
   eslint-plugin-json: 3.1.0
   eslint-plugin-prettier: 4.2.1_2xd4q2tc5cqa5as7uugqhp6oue
   eslint-plugin-vue: 9.3.0_eslint@8.22.0
