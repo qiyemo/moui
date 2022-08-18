@@ -8,13 +8,15 @@
   <div id="app"></div>
   <script type="module">
     import {createApp} from "vue/dist/vue.esm-bundler.js";
-    import MoUI, {MSFCButton, MJSXButton, MButton} from '../../dist/mo-ui.esm.js';
+    import MoUI from '../../dist/mo-ui.esm.js';
+    import '../../dist/assets/entry.7b094ac9.css'
 
     createApp({
       template: `
-      <Mbutton>普通按钮<MButton />
-      <MJSXButton />
-      <MSFCButton />
+      <div>
+         <m-button><m-button/>
+        </div>
+        
       `
     }).use(MoUI).mount('#app');
   </script>
