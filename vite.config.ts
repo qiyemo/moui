@@ -1,16 +1,16 @@
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
 
-import Unocss from './config/unocss';
+import Unocss from "./config/unocss";
 
 const rollupOptions = {
-  external: ['vue', 'vue-router'],
+  external: ["vue"],
   output: {
     globals: {
-      vue: 'Vue'
-    }
-  }
+      vue: "Vue",
+    },
+  },
 };
 
 export default defineConfig({
@@ -20,23 +20,25 @@ export default defineConfig({
     globals: true,
     // simulate DOM with happy-dom
     // (requires installing happy-dom as a peer dependency)
-    environment: 'happy-dom',
+    environment: "happy-dom",
     // 支持 tsx 组件，很关键
     transformMode: {
-      web: [/.[tj]sx$/]
-    }
+      web: [/.[tj]sx$/],
+    },
   },
   // 添加库模式配置
   build: {
     rollupOptions,
-    minify: false,
+    minify: "terser", // boolean | 'terser' | 'esbuild'
+    sourcemap: true, // 输出单独 source 文件
+    brotliSize: true, // 生成压缩大小报告
     lib: {
-      entry: './src/entry.ts',
-      name: 'MoUI',
-      fileName: 'mo-ui',
-      // 导出模块格式
-      formats: ['esm', 'umd', 'iife']
+      entry: "./src/entry.ts",
+      name: "MoUI",
+      fileName: "mo-ui",
+      // 导出模块类型
+      formats: ["esm", "umd", "iife"],
     },
-    cssCodeSplit: true
-  }
+    cssCodeSplit: true,
+  },
 });
