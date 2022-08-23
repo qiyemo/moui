@@ -1,0 +1,14 @@
+{
+  "name": "motl-ui-theme",
+  "version": "0.1.0",
+  "description": "<!--  * @Author: qiye  * @Date: 2021-11-22 23:25:16  * @LastEditors: qiye  * @LastEditTime: 2021-11-22 23:25:16  * @Description: 通用 CSS 目录 -->",
+  "main": "index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "motl-ui-theme": "workspace:^0.1.0"
+  }
+}

@@ -1,10 +1,11 @@
 *.sh
 node_modules
+packages/**/node_modules
 lib
 coverage
 *.md
 *.scss
 *.woff
 *.ttf
-src/index.ts
-dist
+/packages/**/dist
+# .eslintrc.cjs

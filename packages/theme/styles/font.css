@@ -1,0 +1,130 @@
+/*=================================================== 字体 start ============================================*/
+/*  从五个方面出发：1、字体家族 2、主字体 3、字阶与行高 4、字重 5、字体颜色 */
+
+:root {
+  /* 一级标题 */
+  --font-size-title1: 20px;
+  /* 二级标题 */
+  --font-size-title2: 18px;
+  /* 三级标题 */
+  --font-size-title3: 16px;
+  /* 正文 */
+  --font-size-normal: 14px;
+  /* 小字 */
+  --font-size-small: 12px;
+
+  /* 一级标题 */
+  --font-size--main-title: var(--font-size-title1);
+  /* 二级标题 */
+  --font-size--title: var(--font-size-title2);
+  /* 三级标题 */
+  --font-size--small-title: var(--font-size-title3);
+
+  --font-family--main: '黑体', '方正大黑', '宋体', 'Arial', 'Verdana';
+
+  /* 字重 */
+  --font-weight-regular: 400;
+  --font-weight-middle: 500;
+  --font-weight-semibold: 600;
+}
+
+body {
+  font-size: var(--font-size-normal);
+  line-height: calc(1em + 8px);
+}
+
+/* 字体家族 */
+.font-family--main {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    '微软雅黑', Arial, sans-serif;
+}
+
+/* 字号 */
+.font-size--small {
+  font-size: var(--font-size-small);
+}
+.font-size--normal {
+  font-size: var(--font-size-normal);
+}
+.font-size--small-title {
+  font-size: var(--font-size-small-title);
+}
+.font-size--title {
+  font-size: var(--font-size-title);
+}
+.font-size--main-title {
+  font-size: var(--font-size-main-title);
+}
+
+/* 主标题,1级标题 */
+.font--title1 {
+  font-family: '方正大黑简';
+  font-size: var(--font-size-main-title);
+  line-height: calc(1em + 8px);
+  font-weight: var(--font-weight-semibold);
+}
+/* 标题，2级标题 */
+.font--title2 {
+  font-family: '黑体';
+  font-size: var(--font-size-small-title);
+  line-height: calc(1em + 8px);
+  font-weight: var(--font-weight-semibold);
+}
+/* 小标题，3级标题 */
+.font--title3 {
+  font-family: '黑体';
+  font-size: var(--font-size--small-title);
+  line-height: calc(1em + 8px);
+  font-weight: var(--font-weight-middle);
+}
+/* 正文 */
+.font--normal {
+  font-family: '黑体';
+  font-size: var(--font-size-normal);
+  line-height: calc(1em + 8px);
+  color: var(--color);
+}
+/* 不可用 */
+.font--disabled {
+  font-family: '黑体';
+  font-size: var(--font-size-normal);
+  color: var(--color-font-disabled);
+  line-height: calc(1em + 8px);
+}
+
+/* 行高 */
+.line-height--none {
+  line-height: 1;
+}
+.line-height--small {
+  line-height: 1.3;
+}
+.line-height--normal {
+  line-height: 1.5;
+}
+.line-height--large {
+  line-height: 1.7;
+}
+
+/* 字重 */
+.font-weight--regular {
+  font-weight: var(--font-weight-regular);
+}
+.font-weight--semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* 字体颜色 */
+/*辅助字体颜色*/
+.font--info {
+  color: var(--color-info);
+}
+.font--warn {
+  color: var(--color-warn);
+}
+.font--danger {
+  color: var(--color-danger);
+}
+.font--success {
+  color: var(--color-success);
+}

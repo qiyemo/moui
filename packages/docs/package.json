@@ -16,5 +16,8 @@
     "vite": "3.0.8",
     "vitepress": "0.22.4",
     "vitepress-theme-demoblock": "1.4.2"
+  },
+  "dependencies": {
+    "motl-ui": "workspace:^0.1.1"
   }
 }
