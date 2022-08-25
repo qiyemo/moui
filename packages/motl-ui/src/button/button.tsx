@@ -1,33 +1,41 @@
 import { defineComponent, PropType } from "vue";
+import "./button.css";
 
-export type IColor =
-  | "black"
-  | "gray"
-  | "red"
-  | "yellow"
-  | "green"
-  | "blue"
-  | "indigo"
-  | "purple"
-  | "pink";
+export type IType =
+  | "primary"
+  | "ghost"
+  | "dashed"
+  | "link"
+  | "text"
+  | "default";
+
+export type IUse = "success" | "warn" | "danger";
+
+export type ISize = "large" | "middle" | "small";
+
 export const propsDef = {
-  color: {
-    type: String as PropType<IColor>,
-    default: "blue", // 设定默认颜色
+  type: {
+    type: String as PropType<IType>,
+    default: "default",
+  },
+  use: {
+    type: String as PropType<IUse>,
+    default: "", // 设定默认颜色
   },
 };
 
 export default defineComponent({
   name: "MButton",
   props: propsDef,
-  setup(props, { slots }) {
+  setup(props, ctx) {
     return () => (
       <button
-        class={`
-          
-        `}
+        class={`mo-btn mo-btn-${props.type} ${
+          props.use ? `mo-btn-${props.use}` : ""
+        }`}
+        onClick={ctx.emit("click") as any}
       >
-        {slots.default ? slots.default() : ""}
+        <span>{ctx.slots.default ? ctx.slots.default() : ""}</span>
       </button>
     );
   },

@@ -7,11 +7,20 @@
 
 ``` vue
 <template>
-<m-button color="blue">主要按钮</m-button>
-<m-button color="green">绿色按钮</m-button>
-<m-button color="gray">灰色按钮</m-button>
-<m-button color="yellow">黄色按钮</m-button>
-<m-button color="red">红色按钮</m-button>
+<m-button type="primary" class="demo-btn" @click="handleClick">主要按钮</m-button>
+<m-button use="success" class="demo-btn" @click="handleClick">成功按钮</m-button>
+<m-button use="warn" class="demo-btn" @click="handleClick">警告按钮</m-button>
+<m-button use="danger" class="demo-btn" @click="handleClick">失败按钮</m-button>
 </template>
+<style>
+.demo-btn{
+  margin:8px;
+}
+</style>
+<script setup>
+  const handleClick = (text) => {
+    console.log('点击了按钮');
+  }
+</script>
 ```
 ::: 

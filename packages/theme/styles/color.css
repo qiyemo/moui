@@ -24,16 +24,23 @@
   */
   /* 成功 */
   --color-success: var(--color-green-6);
-  --color-success-light: var(--color-green-2);
-  --color-success-lighter: var(--color-green-1);
+  --color-success-hover: var(--color-green-5);
+  --color-success-active: var(--color-green-7);
+  --color-success-deprecated-bg: var(--color-green-1);
+  --color-success-deprecated-border: var(--color-green-3);
+
   /* 警告 */
   --color-warn: var(--color-gold-6);
-  --color-warn-light: var(--color-gold-2);
-  --color-warn-lighter: var(--color-gold-1);
+  --color-warn-hover: var(--color-gold-5);
+  --color-warn-active: var(--color-gold-7);
+  --color-danger-deprecated-bg: var(--color-gold-1);
+  --color-danger-deprecated-border: var(--color-gold-3);
   /* 错误 */
   --color-danger: var(--color-red-5);
-  --color-danger-light: var(--color-red-2);
-  --color-danger-lighter: var(--color-red-1);
+  --color-danger-hover: var(--color-red-4);
+  --color-danger-active: var(--color-red-7);
+  --color-danger-deprecated-bg: var(--color-red-1);
+  --color-danger-deprecated-border: var(--color-red-3);
   /* 信息 */
   --color-gray: var(--color-gray-7);
   --color-gray-light: var(--color-gray-6);

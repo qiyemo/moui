@@ -5,6 +5,8 @@
     应用场景包括：关键行动点，操作状态、重要信息高亮
   */
   --color-primary: var(--color-geekblue-6);
+  --color-primary-hover: var(--color-geekblue-5);
+  --color-primary-active: var(--color-geekblue-7);
   --color-primary-1: var(--color-geekblue-1);
   --color-primary-2: var(--color-geekblue-2);
   --color-primary-3: var(--color-geekblue-3);

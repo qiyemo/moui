@@ -6,9 +6,7 @@ import "vitepress-theme-demoblock/theme/styles/index.css";
 import { registerComponents } from "./register-components.js";
 
 // 插件的组件，主要是 demo 组件
-import MoUI from "motl-ui/dist/mo-ui.esm";
-// 插件 css
-import 'motl-ui/dist/assets/entry.7b094ac9.css';
+import MoUI from "../../../motl-ui/src/entry";
 
 export default {
   ...Theme,

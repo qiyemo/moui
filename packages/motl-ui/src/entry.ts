@@ -1,4 +1,5 @@
 import { App } from "vue";
+import "motl-ui-theme";
 import MButton from "./button";
 
 // 导出单独的组件
