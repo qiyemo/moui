@@ -7,10 +7,16 @@
 
 ``` vue
 <template>
-<m-button type="primary" class="demo-btn" @click="handleClick">主要按钮</m-button>
-<m-button use="success" class="demo-btn" @click="handleClick">成功按钮</m-button>
-<m-button use="warn" class="demo-btn" @click="handleClick">警告按钮</m-button>
-<m-button use="danger" class="demo-btn" @click="handleClick">失败按钮</m-button>
+<div style="margin-bottom: 16px;">
+<m-button @click="handleChangeSize('large')">大</m-button>
+<m-button @click="handleChangeSize('middle')">默认</m-button>
+<m-button @click="handleChangeSize('small')">小</m-button>
+</div>
+
+<m-button type="primary" :size="sizeRef" class="demo-btn" @click="handleClick">主要按钮</m-button>
+<m-button use="success" :size="sizeRef" class="demo-btn" @click="handleClick">成功按钮</m-button>
+<m-button use="warn" :size="sizeRef" class="demo-btn" @click="handleClick">警告按钮</m-button>
+<m-button use="danger" :size="sizeRef" class="demo-btn" @click="handleClick">失败按钮</m-button>
 </template>
 <style>
 .demo-btn{
@@ -18,9 +24,21 @@
 }
 </style>
 <script setup>
-  const handleClick = (text) => {
-    console.log('点击了按钮');
-  }
+import { ref, onMounted } from 'vue';
+const sizeRef = ref('middle');
+const handleClick = (text) => {
+  console.log('点击了按钮');
+}
+
+const handleChangeSize = (size) => {
+  sizeRef.value = size;
+}
+
+onMounted(() => {
+  sizeRef.value = "middle";
+});
+
+
 </script>
 ```
 ::: 

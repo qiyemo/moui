@@ -1,6 +1,6 @@
 {
   "name": "@motl-ui/theme",
-  "private": true,
   "license": "MIT",
-  "main": "index.css"
+  "main": "index.css",
+  "version": "0.1.0"
 }

@@ -29,6 +29,6 @@
     "vue": "3.2.37"
   },
   "dependencies": {
-    "motl-ui-theme": "workspace:^0.1.0"
+    "@motl-ui/theme": "workspace:^0.1.0"
   }
 }

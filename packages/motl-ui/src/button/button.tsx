@@ -22,6 +22,10 @@ export const propsDef = {
     type: String as PropType<IUse>,
     default: "", // 设定默认颜色
   },
+  size: {
+    type: String as PropType<ISize>,
+    default: "middle",
+  },
 };
 
 export default defineComponent({
@@ -32,7 +36,7 @@ export default defineComponent({
       <button
         class={`mo-btn mo-btn-${props.type} ${
           props.use ? `mo-btn-${props.use}` : ""
-        }`}
+        } mo-btn-size-${props.size}`}
         onClick={ctx.emit("click") as any}
       >
         <span>{ctx.slots.default ? ctx.slots.default() : ""}</span>
