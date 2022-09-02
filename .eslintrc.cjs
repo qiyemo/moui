@@ -3,38 +3,25 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2020: true,
-    node: true,
-    jest: true,
+    es2021: true,
+    node: true
   },
-  globals: {
-    ga: true,
-    chrome: true,
-    __DEV__: true,
-  },
-  // 解析 .vue 文件
-  parser: "vue-eslint-parser",
   extends: [
-    "plugin:json/recommended",
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "airbnb-base",
-    "@vue/prettier",
+    'plugin:vue/vue3-recommended', // vue3 插件
+    'airbnb-base',
+    'prettier' // 添加 prettier 插件
   ],
-  plugins: ["@typescript-eslint"],
-
   parserOptions: {
-    parser: "@typescript-eslint/parser",
     ecmaVersion: 13,
-    sourceType: "module",
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module'
   },
+  plugins: ['prettier', '@typescript-eslint'],
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "prettier/prettier": "error",
-    "import/no-unresolved": "off",
-    "import/extensions": "off",
-    "import/no-absolute-path": "off",
-    "import/no-extraneous-dependencies": "off",
-  },
+    'prettier/prettier': 'error',
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+    'import/no-absolute-path': 'off',
+    'import/no-extraneous-dependencies': 'off'
+  }
 };

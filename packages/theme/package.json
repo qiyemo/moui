@@ -1,6 +1,14 @@
 {
   "name": "@motl-ui/theme",
-  "license": "MIT",
+  "version": "0.1.0",
+  "autor": "qiye.mo@foxmail.com",
   "main": "index.css",
-  "version": "0.1.0"
+  "unpkg": "index.css",
+  "jsdelivr": "index.css",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": ""
+  },
+  "style": "index.css",
+  "license": "MIT"
 }

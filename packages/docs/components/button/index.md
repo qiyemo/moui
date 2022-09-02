@@ -8,15 +8,15 @@
 ``` vue
 <template>
 <div style="margin-bottom: 16px;">
-<m-button @click="handleChangeSize('large')">大</m-button>
-<m-button @click="handleChangeSize('middle')">默认</m-button>
-<m-button @click="handleChangeSize('small')">小</m-button>
+<mo-button @click="handleChangeSize('large')">大</mo-button>
+<mo-button @click="handleChangeSize('middle')">默认</mo-button>
+<mo-button @click="handleChangeSize('small')">小</mo-button>
 </div>
 
-<m-button type="primary" :size="sizeRef" class="demo-btn" @click="handleClick">主要按钮</m-button>
-<m-button use="success" :size="sizeRef" class="demo-btn" @click="handleClick">成功按钮</m-button>
-<m-button use="warn" :size="sizeRef" class="demo-btn" @click="handleClick">警告按钮</m-button>
-<m-button use="danger" :size="sizeRef" class="demo-btn" @click="handleClick">失败按钮</m-button>
+<mo-button type="primary" :size="sizeRef" class="demo-btn" @click="handleClick">主要按钮</mo-button>
+<mo-button use="success" :size="sizeRef" class="demo-btn" @click="handleClick">成功按钮</mo-button>
+<mo-button use="warn" :size="sizeRef" class="demo-btn" @click="handleClick">警告按钮</mo-button>
+<mo-button use="danger" :size="sizeRef" class="demo-btn" @click="handleClick">失败按钮</mo-button>
 </template>
 <style>
 .demo-btn{

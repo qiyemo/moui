@@ -6,27 +6,36 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
-    "test": "cd packages/motl-ui && vitest",
     "lint": "eslint --fix --ext .ts,.tsx,.vue packages",
-    "format": "prettier --write \"packages/**/*.ts\" \"packages/**/*.vue\"",
+    "test": "cd packages/motl-ui && vitest",
     "test:run": "cd packages/motl-ui && vitest run"
   },
+  "prettier": {
+    "eslintIntegration": true,
+    "stylelintIntegration": true,
+    "useTabs": false,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "semi": true
+  },
   "devDependencies": {
-    "@babel/eslint-parser": "7.18.9",
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
-    "@typescript-eslint/eslint-plugin": "5.33.1",
-    "@typescript-eslint/parser": "5.33.1",
-    "@vue/eslint-config-prettier": "7.0.0",
-    "eslint": "8.22.0",
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-formatter-pretty": "4.1.0",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-json": "3.1.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-vue": "9.3.0",
     "husky": "8.0.1",
-    "prettier": "2.7.1"
+
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "prettier": "^2.5.1"
+
   },
   "repository": {
     "type": "git",
@@ -39,3 +48,4 @@
   },
   "homepage": "https://github.com/moqiye/moui#readme"
 }
+

@@ -2,7 +2,7 @@
   "name": "motl-ui",
   "version": "0.1.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/motl-ui.esm.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
@@ -26,9 +26,10 @@
     "vitest": "0.21.1"
   },
   "peerDependencies": {
-    "vue": "3.2.37"
+   
   },
   "dependencies": {
+    "vue": "3.2.37",
     "@motl-ui/theme": "workspace:^0.1.0"
   }
 }
