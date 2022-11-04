@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import { describe, expect, test } from 'vitest';
-import Button from '../button';
+import Button from '../button.tsx';
 
 // 测试分组
 describe('Button', () => {

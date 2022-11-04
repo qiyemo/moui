@@ -2,6 +2,7 @@
 import { build, InlineConfig, defineConfig, UserConfig } from 'vite';
 import path from 'path';
 import fs from 'fs-extra';
+// eslint-disable-next-line import/no-unresolved
 import config from '../vite.config';
 
 const toCamelCase = (name: string): string => name;

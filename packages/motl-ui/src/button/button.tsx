@@ -29,9 +29,7 @@ export default defineComponent({
   setup(props, ctx) {
     return () => (
       <button
-        class={`mo-btn mo-btn-${props.type} ${props.use ? `mo-btn-${props.use}` : ''} mo-btn-size-${
-          props.size
-        }`}
+        class={`mo-btn mo-btn-${props.type} ${props.use ? `mo-btn-${props.use}` : ''} mo-btn-size-${props.size}`}
         onClick={ctx.emit('click') as any}
       >
         <span>{ctx.slots.default ? ctx.slots.default() : ''}</span>
