@@ -1,23 +1,5 @@
+
 :root {
-  /* 中性色板 中性色包含了黑、白、灰。能够令页面信息具备良好的主次关系。 */
-  --color-gray-1: #ffffff;
-  --color-gray-2: #fafafa;
-  --color-gray-3: #f5f5f5;
-  --color-gray-4: #f0f0f0;
-  --color-gray-5: #d9d9d9;
-  --color-gray-6: #bfbfbf;
-  --color-gray-7: #8c8c8c;
-  --color-gray-8: #595959;
-  --color-gray-9: #434343;
-  --color-gray-10: #262626;
-  --color-gray-11: #1f1f1f;
-  --color-gray-12: #141414;
-  --color-gray-13: #000000;
-
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-transparent: transparent;
-
   /*
     功能色
     功能色代表了明确的信息以及状态，比如成功、出错、失败、提醒、链接等。功能色的选取需要遵守用户对色彩的基本认知。
@@ -42,10 +24,28 @@
   --color-danger-deprecated-bg: var(--color-red-1);
   --color-danger-deprecated-border: var(--color-red-3);
   /* 信息 */
-  --color-gray: var(--color-gray-7);
-  --color-gray-light: var(--color-gray-6);
-  --color-gray-lighter: var(--color-gray-5);
+  --color-info: var(--color-gray-7);
+  --color-info-light: var(--color-gray-6);
+  --color-info-lighter: var(--color-gray-5);
 
+  /* 中性色板 中性色包含了黑、白、灰。能够令页面信息具备良好的主次关系。 */
+  --color-gray-1: #ffffff;
+  --color-gray-2: #fafafa;
+  --color-gray-3: #f5f5f5;
+  --color-gray-4: #f0f0f0;
+  --color-gray-5: #d9d9d9;
+  --color-gray-6: #bfbfbf;
+  --color-gray-7: #8c8c8c;
+  --color-gray-8: #595959;
+  --color-gray-9: #434343;
+  --color-gray-10: #262626;
+  --color-gray-11: #1f1f1f;
+  --color-gray-12: #141414;
+  --color-gray-13: #000000;
+
+  --color-white: var(--color-gray-1);
+  --color-black: var(--color-gray-13);
+  --color-transparent: transparent;
   /*
     中性色
     Ant Design 的中性色主要被大量的应用在界面的文字部分，
@@ -54,12 +54,11 @@
     Ant Design 的中性色在落地的时候是按照透明度的方式实现的
   */
   /* 文字颜色 */
-  --color-font-titile: rgba(0, 0, 0, 0.85);
-  --color-font-normal: var(--color-font-titile);
+  --color-font-normal: rgba(0, 0, 0, 0.85);   
+  --color-font-titile: var(--color-font-normal);
   --color-font-secondary: rgba(0, 0, 0, 0.45);
-  --color-font-disable: rgba(0, 0, 0, 0.25);
-  /* 边框 */
-  --color-border: rgba(0, 0, 0, 0.15);
+  --color-font-disabled: rgba(0, 0, 0, 0.25);
+
   /* 分割线 */
   --color-dividers: rgba(0, 0, 0, 0.6);
   /* 背景 */
@@ -67,16 +66,9 @@
   /* 表格头 */
   --color-tbl-header: rgba(0, 0, 0, 0.2);
 
-  /*
-    中性色
-    Element-plus 中性色用于文本、背景和边框颜色。 通过运用不同的中性色，来表现层次结构。
-  */
-  /* 文字颜色 */
-  --color-font-primary: #303133;
-  --color-font-regular: #606266;
-  --color-font-secondary: #909399;
-  --color-font-placeholder: #c0c4cc;
-  /* 边框 */
+  /* antd 边框    */
+  --color-border: rgba(0, 0, 0, 0.15);
+  /* element-plus 边框 */
   --color-border-base: #dcdfe6;
   --color-border-light: #e4e7ed;
   --color-border-lighter: #ebeef5;

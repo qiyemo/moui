@@ -13,13 +13,6 @@
   /* 小字 */
   --font-size-small: 12px;
 
-  /* 一级标题 */
-  --font-size--main-title: var(--font-size-title1);
-  /* 二级标题 */
-  --font-size--title: var(--font-size-title2);
-  /* 三级标题 */
-  --font-size--small-title: var(--font-size-title3);
-
   --font-family--main: '黑体', '方正大黑', '宋体', 'Arial', 'Verdana';
 
   /* 字重 */
@@ -31,6 +24,7 @@
 body {
   font-size: var(--font-size-normal);
   line-height: calc(1em + 8px);
+  color: var(--color-font-normal);
 }
 
 /* 字体家族 */
@@ -40,40 +34,42 @@ body {
 }
 
 /* 字号 */
-.font-size--small {
-  font-size: var(--font-size-small);
+.font-size--title1 {
+  font-size: var(--font-size-title1);
+}
+.font-size--title2 {
+  font-size: var(--font-size-title2);
+}
+.font-size--title3 {
+  font-size: var(--font-size-title3);
 }
 .font-size--normal {
   font-size: var(--font-size-normal);
 }
-.font-size--small-title {
-  font-size: var(--font-size-small-title);
+.font-size--small {
+  font-size: var(--font-size-small);
 }
-.font-size--title {
-  font-size: var(--font-size-title);
-}
-.font-size--main-title {
-  font-size: var(--font-size-main-title);
-}
+
+
 
 /* 主标题,1级标题 */
 .font--title1 {
   font-family: '方正大黑简';
-  font-size: var(--font-size-main-title);
+  font-size: var(--font-size-title1);
   line-height: calc(1em + 8px);
   font-weight: var(--font-weight-semibold);
 }
 /* 标题，2级标题 */
 .font--title2 {
   font-family: '黑体';
-  font-size: var(--font-size-small-title);
+  font-size: var(--font-size-title2);
   line-height: calc(1em + 8px);
   font-weight: var(--font-weight-semibold);
 }
 /* 小标题，3级标题 */
 .font--title3 {
   font-family: '黑体';
-  font-size: var(--font-size--small-title);
+  font-size: var(--font-size-title3);
   line-height: calc(1em + 8px);
   font-weight: var(--font-weight-middle);
 }
@@ -91,6 +87,14 @@ body {
   color: var(--color-font-disabled);
   line-height: calc(1em + 8px);
 }
+/* 小字 */
+.font-small{
+  font-family: '黑体';
+  font-size: var(--font-size-small);
+  line-height: calc(1em + 8px);
+  color: var(--color);
+}
+
 
 /* 行高 */
 .line-height--none {
@@ -115,16 +119,19 @@ body {
 }
 
 /* 字体颜色 */
+.color--disble{
+  color: var(--color-font-disabled);
+}
 /*辅助字体颜色*/
-.font--info {
+.font--info, .color--info {
   color: var(--color-info);
 }
-.font--warn {
+.font--warn, .color--warn {
   color: var(--color-warn);
 }
-.font--danger {
+.font--danger, .color--danger {
   color: var(--color-danger);
 }
-.font--success {
+.font--success, .color--success {
   color: var(--color-success);
 }
