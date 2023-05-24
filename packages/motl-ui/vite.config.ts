@@ -1,3 +1,10 @@
+/*
+ * @Author: qiye
+ * @LastEditors: qiye
+ * @description: page description
+ * @Date: 2023-05-23 14:32:49
+ * @LastEditTime: 2023-05-24 11:48:00
+ */
 import path from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
@@ -41,7 +48,7 @@ export default defineConfig({
     // brotliSize: true, // 生成压缩大小报告
     lib: {
       entry: './src/index.ts',
-      name: 'MoUI',
+      name: 'MotlUI',
       fileName: 'motl-ui',
       // 导出模块类型
       formats: ['es', 'umd', 'iife']

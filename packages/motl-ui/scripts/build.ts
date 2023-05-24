@@ -1,6 +1,6 @@
 // 读取 vite 配置
 import { build, InlineConfig, defineConfig, UserConfig } from 'vite';
-import path from 'path';
+import path from 'node:path';
 import fs from 'fs-extra';
 // eslint-disable-next-line import/no-unresolved
 import config from '../vite.config';
@@ -10,6 +10,8 @@ const toCamelCase = (name: string): string => name;
 const buildAll = async () => {
   // 全量打包
   await build(defineConfig(config as UserConfig) as InlineConfig);
+
+  // 单个打包
   const srcDir = path.resolve(__dirname, '../src');
   fs.readdirSync(srcDir)
     .filter((name) => {
@@ -36,8 +38,8 @@ const buildAll = async () => {
         path.resolve(outDir, `package.json`),
         `{
           "name": "motl-ui/${name}",
-          "main": "index.esm.js",
-          "module": "index.esm.js"
+          "main": "index.mjs",
+          "module": "index.mjs"
         }`,
         `utf-8`
       );
