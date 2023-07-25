@@ -10,7 +10,7 @@
     "build:all": "vite build",
     "build:components": "esno ./scripts/build.ts",
     "test": "vitest",
-    "lint": "eslint --fix --ext .ts,.tsx,.vue src"
+    "lint": "eslint --fix --ext .ts,.tsx,.vue ."
   },
   "keywords": [],
   "author": "",
