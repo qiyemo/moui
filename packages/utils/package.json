@@ -1,5 +1,6 @@
 {
-  "name": "@motl-ui/utils",
+  "name": "@moui/utils",
+  "version": "0.0.0",
   "private": true,
   "license": "MIT",
   "main": "index.ts",

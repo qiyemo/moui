@@ -18,7 +18,8 @@
     "vitepress-theme-demoblock": "1.4.2"
   },
   "dependencies": {
-    "@motl-ui/theme": "workspace:^0.1.0",
-    "motl-ui": "workspace:^0.1.1"
+    "@moui/theme-chalk": "workspace:*",
+    "@moui/components": "workspace:*"
+
   }
 }
