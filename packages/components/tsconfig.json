@@ -6,6 +6,6 @@
   },
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": "true",
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["./**/*.ts", "./**/*.d.ts", "./**/*.tsx", "./**/*.vue"],
   "exclude": ["node_modules"]
 }

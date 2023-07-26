@@ -1,11 +1,11 @@
 import { defineComponent, PropType } from 'vue';
-import './button.css';
+import { useNamespace } from '@moui/hooks';
 
 export type IType = 'primary' | 'ghost' | 'dashed' | 'link' | 'text' | 'default';
-
 export type IUse = 'success' | 'warn' | 'danger';
-
 export type ISize = 'large' | 'middle' | 'small';
+
+const ns = useNamespace('button');
 
 export const propsDef = {
   type: {
@@ -28,10 +28,7 @@ export default defineComponent({
   emits: ['click'],
   setup(props, ctx) {
     return () => (
-      <button
-        class={`mo-btn mo-btn-${props.type} ${props.use ? `mo-btn-${props.use}` : ''} mo-btn-size-${props.size}`}
-        onClick={ctx.emit('click') as any}
-      >
+      <button ref="_ref" class={[ns.b()]} onClick={ctx.emit('click') as any}>
         <span>{ctx.slots.default ? ctx.slots.default() : ''}</span>
       </button>
     );

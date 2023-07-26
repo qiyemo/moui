@@ -19,11 +19,8 @@ module.exports = {
     'airbnb-base', // 一种流行的编码风格
     'plugin:@typescript-eslint/recommended', // ts 支持
     'plugin:vue/vue3-recommended', // 使用插件支持vue3
-    'eslint-config-prettier', // 添加 prettier 插件
-    // 1.继承.prettierrc.js文件规则
-    // 2.开启rules的 "prettier/prettier": "error"
-    // 3.eslint fix的同时执行prettier格式化
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'prettier'
   ],
 
   parser: 'vue-eslint-parser',
@@ -35,6 +32,7 @@ module.exports = {
   plugins: [],
 
   rules: {
+    'prettier/prettier': 'error',
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'import/no-absolute-path': 'off',
@@ -43,6 +41,7 @@ module.exports = {
     'no-console': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off', // 生产默认不允许使用debugger
     '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '.*', args: 'none' }], // 变量声明未使用
-    '@typescript-eslint/no-explicit-any': 'off' // 允许ts使用any
+    '@typescript-eslint/no-explicit-any': 'off', // 允许ts使用any
+    'vue/multi-word-component-names': ['off']
   }
 };

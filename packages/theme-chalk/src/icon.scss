@@ -1,0 +1,7 @@
+@use 'mixins/mixins.scss' as *;
+
+// @mixin 用来定义代码块、@include 进行引入。
+@include b(icon) {
+  background-color: red;
+  color: #fff;
+}
