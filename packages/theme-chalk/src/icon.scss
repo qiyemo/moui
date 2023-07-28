@@ -2,6 +2,21 @@
 
 // @mixin 用来定义代码块、@include 进行引入。
 @include b(icon) {
-  background-color: red;
-  color: #fff;
+  --color: inherit;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--color);
+  font-size: inherit;
+
+  svg {
+    height: 1em;
+    width: 1em;
+  }
+
 }

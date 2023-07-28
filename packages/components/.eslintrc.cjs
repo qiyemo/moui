@@ -1,3 +1,10 @@
+/*
+ * @Author: qiye
+ * @LastEditors: qiye
+ * @description: page description
+ * @Date: 2023-07-25 18:11:36
+ * @LastEditTime: 2023-07-28 17:56:51
+ */
 /** .eslintrc.js
  * process.env.NODE_ENV 一个 node 环境变量，使用过程可能会报错，解决办法 npm i -D @types/node
  * 在VSCode中安装ESLint插件，编写过程中检测代码质量
@@ -13,10 +20,11 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
+    'vue/setup-compiler-macros': true
   },
   extends: [
-    'airbnb-base', // 一种流行的编码风格
+    // 'airbnb-base', // 一种流行的编码风格
     'plugin:@typescript-eslint/recommended', // ts 支持
     'plugin:vue/vue3-recommended', // 使用插件支持vue3
     'plugin:prettier/recommended',
@@ -33,10 +41,6 @@ module.exports = {
 
   rules: {
     'prettier/prettier': 'error',
-    'import/no-unresolved': 'off',
-    'import/extensions': 'off',
-    'import/no-absolute-path': 'off',
-    'import/no-extraneous-dependencies': 'off',
     // 生产模式不允许使用log
     'no-console': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off', // 生产默认不允许使用debugger

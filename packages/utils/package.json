@@ -4,6 +4,9 @@
   "private": true,
   "license": "MIT",
   "main": "index.ts",
+  "module": "index.ts",
+  "unpkg": "index.js",
+  "jsdelivr": "index.js",
   "peerDependencies": {
     "vue": "3.2.37"
   }

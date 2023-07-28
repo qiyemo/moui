@@ -1,5 +1,4 @@
 @use 'config';
-
 // 该函数将选择器转化为字符串，并截取指定位置的字符
 @function selectorToString($selector) {
   $selector: inspect(
