@@ -1,11 +1,19 @@
+/*
+ * @Author: qiye
+ * @LastEditors: qiye
+ * @description: page description
+ * @Date: 2023-08-01 21:20:51
+ * @LastEditTime: 2023-08-01 23:24:40
+ */
 import { createApp } from 'vue';
 import MoIcon from '@moui/components/icon';
+import MoSheet from '@moui/components/luckysheet';
 import '@moui/theme-chalk/src/index.scss';
 import './style.css';
 import App from './App.vue';
 
 // 需要注册的组件列表
-const components = [MoIcon];
+const components = [MoIcon, MoSheet];
 // 是否已安装标识
 const INSTALLED_KEY = Symbol('INSTALLED_KEY');
 // 组件库插件
