@@ -1,5 +1,6 @@
 {
-  "name": "moui-docs",
+  "name": "@moui/docs",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,6 +21,5 @@
   "dependencies": {
     "@moui/theme-chalk": "workspace:*",
     "@moui/components": "workspace:*"
-
   }
 }
